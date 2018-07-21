@@ -4,19 +4,49 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
   },
   "dependencies": {
+    "native-base": "^2.7.2",
     "react": "16.4.1",
-    "react-native": "0.56.0"
+    "react-native": "0.56.0",
+    "prop-types": "^15.6.1"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.2",
     "babel-jest": "23.4.0",
     "babel-preset-react-native": "^5",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
     "jest": "23.4.1",
-    "react-test-renderer": "16.4.1"
+    "jsdom": "^11.6.2",
+    "react-test-renderer": "16.4.1",
+    "react-dom": "^16.2.0",
+    "react-native-mock-render": "^0.0.20"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "testEnvironment": "jsdom",
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-native|native-base-shoutem-theme|@shoutem/animation|@shoutem/ui|tcomb-form-native)"
+    ],
+    "setupFiles": [
+      "./setupTests.js"
+    ],
+    "coverageReporters": [
+      "text",
+      "text-summary"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!setupTests.js"
+    ]
   }
 }
