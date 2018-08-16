@@ -3,18 +3,17 @@
  * ranggaaabayu@gmail.com - ranggaaabayu@icloud.com
  * Github : HongkyBayu
  *
- * Represents Beranda Components
+ * Represents Panen Component
  */
 
 import React, { Component } from 'react';
-import { View, Text, Button } from 'react-native';
 
-export default class BerandaComponent extends Component {
+export default class PanenComponent extends Component {
   render() {
     return (
       <View>
-        <Text>Beranda</Text>
-        <Button title='Go to Panen'/>
+        <Text>Panen</Text>
+        <Button title='Go to Beranda'/>
       </View>
     )
   }

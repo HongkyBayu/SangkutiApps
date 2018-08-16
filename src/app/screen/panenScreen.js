@@ -3,17 +3,17 @@
  * ranggaaabayu@gmail.com - ranggaaabayu@icloud.com
  * Github : HongkyBayu
  *
- * Represents Root of Beranda Screen
+ * Represents Root of Panen Screen
  */
 
 import React, { Component } from 'react';
 import { Icon } from 'react-native-elements';
-import BerandaComponent from '../components/beranda/beranda.component';
-import { ScreenBeranda } from './screenConfig';
+import { ScreenPanen } from './screenConfig';
+import PanenComponent from '../components/panen/panen.component';
 
 export default class Beranda extends Component {
   static navigationOptions = {
-    drawerLabel: ScreenBeranda,
+    drawerLabel: ScreenPanen,
     drawerIcon: () => (
       <Icon name='Home'/>
     ),
@@ -21,7 +21,7 @@ export default class Beranda extends Component {
 
   render() {
     return (
-      <BerandaComponent/>
+      <PanenComponent />
     )
   }
 }
