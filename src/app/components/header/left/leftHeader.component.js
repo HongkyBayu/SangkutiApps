@@ -7,13 +7,17 @@
  */
 
 import React, { Component } from 'react';
+import { TouchableOpacity } from 'react-native';
 import { Icon } from 'react-native-elements';
 
 export default class LeftHeaderComponent extends Component {
   render() {
     const { openHamburgerDrawer } = this.props;
     return (
-      <Icon name='menu' onPress={openHamburgerDrawer}/>
+      <TouchableOpacity onPress={openHamburgerDrawer}>
+        <Icon name='menu'/>
+      </TouchableOpacity>
+
     )
   }
 }
