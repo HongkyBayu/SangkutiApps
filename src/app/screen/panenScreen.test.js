@@ -15,11 +15,5 @@ describe('Panen Screen', () => {
     it('should render Panen component', () => {
       expect(panenComponent).toBeDefined();
     });
-
-    it('should render Panen component with props title equals to "Panen"', () => {
-      const panenTitle = panenComponent.props().title;
-
-      expect(panenTitle).toEqual('Panen');
-    });
   });
 });

@@ -10,10 +10,10 @@ import React, { Component } from 'react';
 import { Icon } from 'react-native-elements';
 
 export default class LeftHeaderComponent extends Component {
-
   render() {
+    const { openHamburgerDrawer } = this.props;
     return (
-      <Icon name='menu'/>
+      <Icon name='menu' onPress={openHamburgerDrawer}/>
     )
   }
 }

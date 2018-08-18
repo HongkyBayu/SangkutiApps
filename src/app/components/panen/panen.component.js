@@ -7,6 +7,7 @@
  */
 
 import React, { Component } from 'react';
+import { View, Text, Button } from 'react-native';
 import HeaderComponent from '../header/header.component';
 
 export default class PanenComponent extends Component {
@@ -14,7 +15,7 @@ export default class PanenComponent extends Component {
     const { title } = this.props;
     return (
       <View>
-        <HeaderComponent textTitle={title}/>
+        <HeaderComponent headerTitle='Panen' {...this.props}/>
         <Text>Panen</Text>
         <Button title='Go to Beranda'/>
       </View>

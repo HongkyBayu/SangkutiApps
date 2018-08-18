@@ -13,11 +13,16 @@ import CenterHeaderComponent from './center/centerHeader.component';
 import RightHeaderComponent from './right/rightHeader.component';
 
 export default class HeaderComponent extends Component {
+
+  _onToggleDrawer() {
+    this.props.navigation.openDrawer();
+  }
+
   render() {
     const { headerTitle } = this.props;
     return (
       <Header
-        leftComponent={<LeftHeaderComponent />}
+        leftComponent={<LeftHeaderComponent openHamburgerDrawer={() => this._onToggleDrawer()}/>}
         centerComponent={<CenterHeaderComponent textTitle={headerTitle}/>}
         rightComponent={<RightHeaderComponent />}
       />

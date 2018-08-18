@@ -15,11 +15,5 @@ describe('Beranda Screen', () => {
     it('should render Beranda component', () => {
       expect(berandaComponent).toBeDefined();
     });
-
-    it('should render Beranda component with props title equals to "Beranda"', () => {
-      const berandaTitle = berandaComponent.props().title;
-
-      expect(berandaTitle).toEqual('Beranda');
-    });
   });
 });

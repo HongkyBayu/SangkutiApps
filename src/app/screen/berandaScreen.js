@@ -7,23 +7,23 @@
  */
 
 import React, { Component } from 'react';
+import { Image } from 'react-native';
 import { Icon } from 'react-native-elements';
 import BerandaComponent from '../components/beranda/beranda.component';
-import { ScreenBeranda } from './screenConfig';
 
 export default class Beranda extends Component {
-  static navigationOptions = ({ navigation }) => {
-    let drawerLabel = ScreenBeranda;
-    let drawerIcon = () => (
-      <Icon name='Home'/>
-    );
-
-    return { drawerLabel, drawerIcon };
+  static navigationOptions = {
+    drawerLabel: 'Beranda',
+    drawerIcon: () => (
+      <Image>
+        <Icon name='Home'/>
+      </Image>
+    ),
   };
 
   render() {
     return (
-      <BerandaComponent title={ScreenBeranda}/>
+      <BerandaComponent navigation={this.props.navigation}/>
     )
   }
 }

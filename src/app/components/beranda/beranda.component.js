@@ -12,10 +12,9 @@ import HeaderComponent from '../header/header.component';
 
 export default class BerandaComponent extends Component {
   render() {
-    const { title } = this.props;
     return (
       <View>
-        <HeaderComponent headerTitle={title}/>
+        <HeaderComponent headerTitle='Beranda' {...this.props}/>
         <Text>Beranda</Text>
         <Button title='Go to Panen'/>
       </View>

@@ -6,8 +6,8 @@
  * Represents the screens configuration
  */
 
-const ScreenBeranda = 'Beranda';
-const ScreenPanen = 'Panen';
+const Beranda = 'Beranda';
+const Panen = 'Panen';
 const ScreenKeluar = 'Keluar';
 
-export { ScreenBeranda, ScreenPanen, ScreenKeluar };
+export { Beranda, Panen, ScreenKeluar };
