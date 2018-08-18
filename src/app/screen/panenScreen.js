@@ -21,7 +21,7 @@ export default class Beranda extends Component {
 
   render() {
     return (
-      <PanenComponent />
+      <PanenComponent title={ScreenPanen}/>
     )
   }
 }

@@ -3,12 +3,23 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import Panen from './panenScreen';
 
-describe('Beranda Screen', () => {
+describe('Panen Screen', () => {
+  let wrapper;
+  let panenComponent;
+
+  beforeEach(() => {
+    wrapper = shallow(<Panen />);
+    panenComponent = wrapper.find('PanenComponent').first();
+  });
   describe('render', () => {
-    it('should render Beranda component', () => {
-      const wrapper = shallow(<Panen />);
-      const panenComponent = wrapper.find('PanenComponent').first();
+    it('should render Panen component', () => {
       expect(panenComponent).toBeDefined();
+    });
+
+    it('should render Panen component with props title equals to "Panen"', () => {
+      const panenTitle = panenComponent.props().title;
+
+      expect(panenTitle).toEqual('Panen');
     });
   });
 });
