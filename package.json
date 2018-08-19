@@ -9,12 +9,14 @@
     "lint:fix": "eslint --fix ."
   },
   "dependencies": {
+    "formik": "^1.0.3",
     "prop-types": "^15.6.1",
     "react": "16.4.1",
     "react-native": "0.56.0",
     "react-native-elements": "^0.19.1",
     "react-native-vector-icons": "^5.0.0",
-    "react-navigation": "^2.11.2"
+    "react-navigation": "^2.11.2",
+    "yup": "^0.26.2"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta",

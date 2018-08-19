@@ -8,6 +8,12 @@
 
 const Beranda = 'Beranda';
 const Panen = 'Panen';
-const ScreenKeluar = 'Keluar';
+const AuthLoading = 'AuthLoading';
+const SignIn = 'SignIn';
 
-export { Beranda, Panen, ScreenKeluar };
+export {
+  Beranda,
+  Panen,
+  AuthLoading,
+  SignIn
+};

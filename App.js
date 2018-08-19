@@ -7,13 +7,17 @@
  */
 
 import { Dimensions } from 'react-native';
-import { createDrawerNavigator } from 'react-navigation';
+import {
+  createDrawerNavigator,
+  createStackNavigator,
+  createSwitchNavigator
+} from 'react-navigation';
 import screens from './src/app/screens';
-import { Beranda, Panen } from './src/app/screens/config/screenConfig';
+import { Beranda, Panen, AuthLoading, SignIn } from './src/app/screens/config/screenConfig';
 
 const { width } = Dimensions.get('window');
 
-let routeConfigs = {
+let drawerRoutes = {
   Beranda: {
     screen: screens.BerandaScreen
   },
@@ -31,4 +35,21 @@ let drawerNavigatorConfigs = {
   }
 };
 
-export default createDrawerNavigator(routeConfigs, drawerNavigatorConfigs);
+let authRoute = {
+  SignIn: screens.SignInScreen
+};
+
+const AppStack = createDrawerNavigator(drawerRoutes, drawerNavigatorConfigs);
+const AuthStack = createStackNavigator(authRoute);
+
+let switchRoutes = {
+  AuthLoading: screens.AuthLoadingScreen,
+  App: AppStack,
+  Auth: AuthStack
+};
+
+let switchNavigatorConfig = {
+  initialRouteName: AuthLoading
+};
+
+export default createSwitchNavigator(switchRoutes, switchNavigatorConfig);
