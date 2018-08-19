@@ -8,20 +8,17 @@
 
 import { Dimensions } from 'react-native';
 import { createDrawerNavigator } from 'react-navigation';
-
-import BerandaComponent from './src/app/components/beranda/beranda.component';
-import PanenComponent from './src/app/components/panen/panen.component';
-
-import { Beranda, Panen } from './src/app/screen/screenConfig';
+import screens from './src/app/screens';
+import { Beranda, Panen } from './src/app/screens/config/screenConfig';
 
 const { width } = Dimensions.get('window');
 
 let routeConfigs = {
   Beranda: {
-    screen: BerandaComponent
+    screen: screens.BerandaScreen
   },
   Panen: {
-    screen: PanenComponent
+    screen: screens.PanenScreen
   }
 };
 
